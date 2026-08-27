@@ -1,0 +1,61 @@
+/* =========================================================
+   Tablet — 1024px and below
+========================================================= */
+@media (max-width:1024px){
+  .card-grid{grid-template-columns:repeat(2,1fr);}
+  .journey-steps{grid-template-columns:repeat(2,1fr);row-gap:2.5rem;}
+  .journey-line{display:none;}
+  .menu-grid{grid-template-columns:repeat(2,1fr);}
+  .reviews-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);row-gap:2.5rem;}
+  .story-grid{gap:3rem;}
+  .footer-inner{grid-template-columns:1fr 1fr;row-gap:2.5rem;}
+}
+
+/* =========================================================
+   Nav collapse — 900px and below
+========================================================= */
+@media (max-width:900px){
+  .nav-links{display:none;}
+  #hamburger{display:flex;}
+}
+
+/* =========================================================
+   Small tablet / large phone — 768px and below
+========================================================= */
+@media (max-width:768px){
+  .section{padding:5rem 0;}
+  .section-inner{padding:0 1.5rem;}
+  .story-grid,.visit-grid{grid-template-columns:1fr;}
+  .story-img img{height:340px;}
+  .visit-map{aspect-ratio:16/9;}
+  .hero-buttons{flex-direction:column;width:100%;max-width:280px;margin:0 auto;}
+  .hero-buttons .btn{width:100%;}
+}
+
+/* =========================================================
+   Mobile — 430px and below
+========================================================= */
+@media (max-width:430px){
+  .nav-inner{padding:0 1.25rem;}
+  .card-grid{grid-template-columns:1fr;}
+  .menu-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+  .journey-steps{grid-template-columns:1fr;gap:1.75rem;}
+  .footer-inner{grid-template-columns:1fr;text-align:center;}
+  .menu-item{flex-direction:column;text-align:center;}
+  .menu-item-footer{flex-direction:column;gap:.6rem;}
+  #newsletter-form{flex-direction:column;}
+  #newsletter-form input{width:100%;}
+  .intro-brand{font-size:2.1rem;}
+  #intro-skip{bottom:1.25rem;right:1.25rem;}
+}
+
+/* =========================================================
+   Very small — 375px and below
+========================================================= */
+@media (max-width:375px){
+  .hero-heading{font-size:2.2rem;}
+  .section-heading{font-size:1.7rem;}
+}
