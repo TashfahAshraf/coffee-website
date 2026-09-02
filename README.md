@@ -44,10 +44,3 @@ brew-and-bloom/
 - [ ] **Phase 7 — Extras** — newsletter persistence, table reservations, order status tracking.
 
 ## Running the frontend right now
-
-`client/` is still plain static HTML/CSS/JS — open `client/index.html` directly,
-or serve the folder with any static server, e.g.:
-
-```
-npx serve client
-```
