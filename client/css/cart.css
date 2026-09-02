@@ -1,0 +1,198 @@
+/* =========================================================
+   BREW & BLOOM — cart.css
+   Navbar cart trigger + badge, off-canvas cart drawer.
+   Uses the same design tokens as style.css (:root vars).
+========================================================= */
+
+/* ---------------- navbar trigger ---------------- */
+#cart-toggle{
+  position:relative;
+  width:38px;height:38px;border-radius:50%;
+  border:1.5px solid rgba(27,17,12,.2);
+  background:transparent;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;
+  transition:transform var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+#navbar:not(.scrolled) #cart-toggle{border-color:rgba(255,253,248,.4);}
+#cart-toggle:hover{transform:scale(1.08);border-color:var(--caramel);}
+
+.cart-count{
+  position:absolute;top:-6px;right:-6px;
+  min-width:18px;height:18px;padding:0 4px;
+  border-radius:999px;
+  background:var(--caramel);
+  color:var(--white);
+  font-size:.65rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  line-height:1;
+  transition:transform var(--dur-fast) var(--ease);
+}
+#cart-toggle:not(.has-items) .cart-count,
+#cart-toggle-mobile:not(.has-items) .cart-count{opacity:.55;}
+
+/* ---------------- mobile menu trigger ---------------- */
+.mobile-cart-btn{
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  width:100%;
+}
+.mobile-cart-btn .cart-count{
+  position:static;
+  background:var(--caramel);color:var(--white);
+  border-radius:999px;padding:0 6px;min-width:16px;height:16px;font-size:.7rem;
+}
+
+/* ---------------- overlay ---------------- */
+#cart-overlay{
+  position:fixed;inset:0;
+  background:rgba(27,17,12,.45);
+  opacity:0;pointer-events:none;
+  transition:opacity var(--dur-med) var(--ease);
+  z-index:900;
+}
+#cart-overlay.show{opacity:1;pointer-events:auto;}
+
+/* ---------------- drawer panel ---------------- */
+#cart-panel{
+  position:fixed;top:0;right:0;bottom:0;
+  width:min(420px, 100%);
+  background:var(--white);
+  box-shadow:-16px 0 48px rgba(27,17,12,.25);
+  z-index:901;
+  display:flex;flex-direction:column;
+  transform:translateX(100%);
+  transition:transform var(--dur-med) var(--ease);
+}
+#cart-panel.open{transform:translateX(0);}
+
+.cart-panel-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.5rem 1.75rem;
+  border-bottom:1px solid rgba(27,17,12,.08);
+}
+.cart-panel-header h2{
+  font-size:1.15rem;
+  color:var(--espresso);
+}
+#cart-close{
+  width:34px;height:34px;border-radius:50%;
+  border:1.5px solid rgba(27,17,12,.15);
+  background:transparent;
+  font-size:.9rem;color:var(--espresso);
+  transition:border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+#cart-close:hover{border-color:var(--caramel);transform:rotate(90deg);}
+
+.cart-items{
+  flex:1;overflow-y:auto;
+  padding:1rem 1.75rem;
+}
+
+.cart-empty{
+  height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;gap:.75rem;
+  color:var(--coffee-brown);
+  padding:2rem 1rem;
+}
+.cart-empty-icon{font-size:2.2rem;}
+.cart-empty p{font-size:.9rem;line-height:1.6;}
+
+.cart-item{
+  display:flex;gap:.9rem;
+  padding:1rem 0;
+  border-bottom:1px solid rgba(27,17,12,.08);
+}
+.cart-item:last-child{border-bottom:none;}
+.cart-item-img{
+  width:64px;height:64px;flex:none;
+  border-radius:var(--radius-sm);
+  background-size:cover;background-position:center;
+}
+.cart-item-body{flex:1;min-width:0;}
+.cart-item-top{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;
+}
+.cart-item-top h4{
+  font-family:var(--font-display);
+  font-size:1rem;color:var(--espresso);
+  margin:0;
+}
+.cart-item-remove{
+  flex:none;
+  background:transparent;border:none;
+  color:rgba(27,17,12,.4);
+  font-size:.8rem;
+  padding:2px;
+  transition:color var(--dur-fast) var(--ease);
+}
+.cart-item-remove:hover{color:#B3492F;}
+
+.cart-item-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:.6rem;
+}
+.qty-stepper{
+  display:flex;align-items:center;gap:.6rem;
+  border:1.5px solid rgba(27,17,12,.15);
+  border-radius:999px;
+  padding:.2rem .3rem;
+}
+.qty-stepper button{
+  width:22px;height:22px;border-radius:50%;
+  background:transparent;border:none;
+  font-size:.9rem;color:var(--espresso);
+  display:flex;align-items:center;justify-content:center;
+  transition:background var(--dur-fast) var(--ease);
+}
+.qty-stepper button:hover{background:var(--soft-latte);}
+.qty-stepper span{
+  min-width:14px;text-align:center;
+  font-size:.9rem;font-weight:600;
+}
+.cart-item-price{
+  font-weight:600;color:var(--coffee-brown);
+  font-size:.92rem;
+}
+
+.cart-panel-footer{
+  padding:1.5rem 1.75rem 1.75rem;
+  border-top:1px solid rgba(27,17,12,.08);
+}
+.cart-subtotal-row{
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--font-display);
+  font-size:1.1rem;color:var(--espresso);
+  margin-bottom:1rem;
+}
+.cart-checkout-btn{width:100%;}
+.cart-footnote{
+  margin-top:.75rem;
+  font-size:.75rem;
+  color:rgba(27,17,12,.5);
+  text-align:center;
+  line-height:1.5;
+}
+
+/* ---------------- night mode ---------------- */
+body.night-mode #cart-panel{
+  background:#241811;
+}
+body.night-mode .cart-panel-header,
+body.night-mode .cart-panel-footer{border-color:rgba(231,210,184,.12);}
+body.night-mode .cart-panel-header h2,
+body.night-mode .cart-item-top h4,
+body.night-mode .cart-subtotal-row{color:#F5EBDD;}
+body.night-mode .cart-item{border-color:rgba(231,210,184,.12);}
+body.night-mode .cart-empty{color:#D8C7B8;}
+body.night-mode #cart-close{border-color:rgba(231,210,184,.25);color:#F5EBDD;}
+body.night-mode .qty-stepper{border-color:rgba(231,210,184,.25);}
+body.night-mode .qty-stepper span,
+body.night-mode .qty-stepper button{color:#F5EBDD;}
+body.night-mode .cart-item-price{color:#E7D2B8;}
+body.night-mode .cart-footnote{color:rgba(231,210,184,.55);}
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 640px){
+  #cart-panel{width:100%;}
+}

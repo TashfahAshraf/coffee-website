@@ -2,7 +2,6 @@
    Tablet — 1024px and below
 ========================================================= */
 @media (max-width:1024px){
-  .card-grid{grid-template-columns:repeat(2,1fr);}
   .journey-steps{grid-template-columns:repeat(2,1fr);row-gap:2.5rem;}
   .journey-line{display:none;}
   .menu-grid{grid-template-columns:repeat(2,1fr);}
@@ -38,7 +37,6 @@
 ========================================================= */
 @media (max-width:430px){
   .nav-inner{padding:0 1.25rem;}
-  .card-grid{grid-template-columns:1fr;}
   .menu-grid{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem;}
@@ -48,8 +46,6 @@
   .menu-item-footer{flex-direction:column;gap:.6rem;}
   #newsletter-form{flex-direction:column;}
   #newsletter-form input{width:100%;}
-  .intro-brand{font-size:2.1rem;}
-  #intro-skip{bottom:1.25rem;right:1.25rem;}
 }
 
 /* =========================================================

@@ -58,23 +58,10 @@
 })();
 
 /* =========================================================
-   ORDER INTERACTION (event delegation — works for menu.js items too)
+   NOTE: "Add to Order" clicks (toast + adding to the cart)
+   are now handled in cart.js, since the cart needs to own
+   that click to update its state and badge count too.
 ========================================================= */
-(function(){
-  const toast = document.getElementById('order-toast');
-  if(!toast) return;
-  let toastTimer;
-
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.btn-add');
-    if(!btn) return;
-    const name = btn.dataset.name || 'Item';
-    toast.textContent = `☕ ${name} added to your order`;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
-  });
-})();
 
 /* =========================================================
    NEWSLETTER FORM VALIDATION
@@ -100,6 +87,58 @@
       return;
     }
     msg.textContent = 'You\'re in the bloom — welcome!';
+    msg.style.color = '#B87941';
+    form.reset();
+  });
+})();
+
+/* =========================================================
+   RESERVATION FORM VALIDATION
+   (Frontend-only for now — no backend to save to yet. See
+   the footnote under the form and the Phase 7 roadmap item.)
+========================================================= */
+(function(){
+  const form = document.getElementById('reserve-form');
+  const msg = document.getElementById('reserve-msg');
+  if(!form) return;
+
+  function isValidEmail(value){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('reserve-name');
+    const email = document.getElementById('reserve-email');
+    const phone = document.getElementById('reserve-phone');
+    const guests = document.getElementById('reserve-guests');
+    const date = document.getElementById('reserve-date');
+    const time = document.getElementById('reserve-time');
+
+    const fields = [name, email, phone, guests, date, time];
+    const firstEmpty = fields.find(f => !f.value.trim());
+
+    if(firstEmpty){
+      msg.textContent = 'Please fill in every field to reserve your table.';
+      msg.style.color = '#E07A5F';
+      firstEmpty.focus();
+      return;
+    }
+    if(!isValidEmail(email.value.trim())){
+      msg.textContent = 'Please enter a valid email address.';
+      msg.style.color = '#E07A5F';
+      email.focus();
+      return;
+    }
+    if(Number(guests.value) < 1 || Number(guests.value) > 12){
+      msg.textContent = 'Guests should be between 1 and 12 — call us directly for larger groups.';
+      msg.style.color = '#E07A5F';
+      guests.focus();
+      return;
+    }
+
+    msg.textContent = `Thanks, ${name.value.trim()}! We've noted your table for ${guests.value} on ${date.value} at ${time.value}.`;
     msg.style.color = '#B87941';
     form.reset();
   });

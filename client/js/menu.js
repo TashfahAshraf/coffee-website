@@ -4,38 +4,47 @@
 (function(){
   const MENU_ITEMS = [
     { name:"Espresso", desc:"Bold, concentrated, and rich.", price:"$3.25", category:"coffee",
-      img:"https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/9050518/pexels-photo-9050518.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Cappuccino", desc:"Espresso, steamed milk, thick foam.", price:"$4.50", category:"coffee",
-      img:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/13623762/pexels-photo-13623762.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Latte", desc:"Smooth espresso with silky steamed milk.", price:"$4.75", category:"coffee",
-      img:"https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/13623762/pexels-photo-13623762.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Americano", desc:"Espresso lengthened with hot water.", price:"$3.75", category:"coffee",
-      img:"https://images.unsplash.com/photo-1521302080334-4bebac2763a6?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/9050518/pexels-photo-9050518.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Mocha", desc:"Espresso, chocolate, steamed milk.", price:"$5.00", category:"coffee",
-      img:"https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/691169/pexels-photo-691169.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Cold Brew", desc:"Slow-steeped for 18 hours, smooth and bold.", price:"$4.50", category:"cold",
-      img:"https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Iced Latte", desc:"Chilled espresso and cold milk over ice.", price:"$4.75", category:"cold",
-      img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Caramel Frappe", desc:"Blended coffee, caramel, whipped cream.", price:"$5.50", category:"cold",
-      img:"https://images.unsplash.com/photo-1461988091159-192b6df7054f?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Vanilla Cold Coffee", desc:"Chilled coffee, vanilla, milk.", price:"$4.90", category:"cold",
-      img:"https://images.unsplash.com/photo-1517959105821-eaf2591984ca?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Ceremonial Matcha", desc:"Stone-ground green tea, oat milk.", price:"$5.25", category:"tea",
-      img:"https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/8634757/pexels-photo-8634757.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Chai Latte", desc:"Spiced black tea, steamed milk.", price:"$4.60", category:"tea",
-      img:"https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/33789289/pexels-photo-33789289.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Chamomile Bloom", desc:"Calming chamomile with honey.", price:"$4.00", category:"tea",
-      img:"https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/6962419/pexels-photo-6962419.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Chocolate Brownie", desc:"Dense, fudgy, dark chocolate.", price:"$4.25", category:"desserts",
-      img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/25595974/pexels-photo-25595974.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Tiramisu", desc:"Espresso-soaked layers, mascarpone.", price:"$5.75", category:"desserts",
-      img:"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/13177921/pexels-photo-13177921.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Cinnamon Roll", desc:"Warm, soft, glazed.", price:"$4.50", category:"desserts",
-      img:"https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=200&q=80" },
+      img:"https://images.pexels.com/photos/9443534/pexels-photo-9443534.jpeg?auto=compress&cs=tinysrgb&w=200" },
     { name:"Croissant", desc:"Buttery, flaky, baked fresh daily.", price:"$3.75", category:"desserts",
-      img:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=200&q=80" }
+      img:"https://images.pexels.com/photos/19296861/pexels-photo-19296861.jpeg?auto=compress&cs=tinysrgb&w=200" }
   ];
+
+  // Expose menu data globally so cart.js (and a future api.js) can read it.
+  // In Phase 3 this array gets replaced by a fetch('/api/menu') call —
+  // keeping it on window.BB_MENU_ITEMS now means that swap won't touch any other file.
+  window.BB_MENU_ITEMS = MENU_ITEMS;
+
+  function priceToNumber(priceStr){
+    return parseFloat(String(priceStr).replace(/[^0-9.]/g, '')) || 0;
+  }
 
   function renderMenu(){
     const grid = document.getElementById('menu-grid');
@@ -48,7 +57,7 @@
           <p>${item.desc}</p>
           <div class="menu-item-footer">
             <span class="price">${item.price}</span>
-            <button class="btn-add" data-name="${item.name}">Add</button>
+            <button class="btn-add" data-name="${item.name}" data-price="${priceToNumber(item.price)}" data-img="${item.img}">Add</button>
           </div>
         </div>
       </div>

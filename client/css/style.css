@@ -3,10 +3,10 @@
 ========================================================= */
 :root{
   --espresso:#2B1B14;
-  --coffee-brown:#5A3825;
-  --caramel:#B87941;
-  --cream:#F5EBDD;
-  --soft-latte:#E7D2B8;
+  --coffee-brown:#654434;
+  --caramel:#B86632;
+  --cream:#F4EFE6;
+  --soft-latte:#D8C3A5;
   --dark-chocolate:#1B110C;
   --white:#FFFDF8;
 
@@ -291,44 +291,19 @@ ul{list-style:none;margin:0;padding:0;}
 
 /* =========================================================
    Featured coffee cards
+   (superseded by .editorial-* in redesign.css — .price and
+   .btn-add below are still shared with the menu grid items)
 ========================================================= */
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:1.75rem;
-}
-.coffee-card{
-  background:var(--white);
-  border-radius:var(--radius-md);
-  overflow:hidden;
-  box-shadow:var(--shadow-card);
-  transition:transform 350ms var(--ease), box-shadow 350ms var(--ease);
-}
-.coffee-card:hover{
-  transform:translateY(-8px);
-  box-shadow:var(--shadow-card-hover);
-}
-.coffee-card-img{
-  height:190px;background-size:cover;background-position:center;
-  transition:transform 400ms var(--ease);
-}
-.coffee-card:hover .coffee-card-img{transform:scale(1.05);}
-.coffee-card-body{padding:1.4rem;}
-.coffee-card-body h3{font-size:1.15rem;margin-bottom:.4rem;}
-.coffee-card-body p{color:var(--coffee-brown);font-size:.88rem;margin-bottom:1.1rem;min-height:2.4em;}
-.coffee-card-footer{display:flex;align-items:center;justify-content:space-between;}
 .price{
   font-weight:700;color:var(--espresso);
   transition:color var(--dur-fast) var(--ease);
 }
-.coffee-card:hover .price{color:var(--caramel);}
 .btn-add{
   background:transparent;border:1.5px solid var(--espresso);
   color:var(--espresso);
   padding:.5rem 1rem;border-radius:999px;font-size:.78rem;font-weight:600;
   transition:background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
-.coffee-card:hover .btn-add{border-color:var(--caramel);}
 .btn-add:hover{background:var(--espresso);color:var(--white);transform:scale(1.05);}
 
 /* =========================================================
@@ -533,15 +508,14 @@ ul{list-style:none;margin:0;padding:0;}
    which must stay exactly as-is regardless of day/night state)
 ========================================================= */
 body.night-mode{
-  background:#1B120D;
-  color:#E7D2B8;
+  background:#17110F;
+  color:#F5EDE2;
 }
-body.night-mode .section.alt{background:#241812;}
+body.night-mode .section.alt{background:#1D1712;}
 
-body.night-mode .coffee-card,
 body.night-mode .review-card,
 body.night-mode .menu-item{
-  background:#2E1F16;
+  background:#251A16;
   box-shadow:0 12px 30px rgba(0,0,0,.4);
 }
 
@@ -549,7 +523,6 @@ body.night-mode .menu-item{
    (hero/signature/newsletter/footer headings keep their own explicit
    var(--white) and are untouched here) */
 body.night-mode .section-heading,
-body.night-mode .coffee-card-body h3,
 body.night-mode .menu-item-body h4,
 body.night-mode .journey-step h3,
 body.night-mode .stat-num,
@@ -557,13 +530,13 @@ body.night-mode .price{color:#E7D2B8;}
 
 body.night-mode .section-sub,
 body.night-mode .story-content p,
-body.night-mode .coffee-card-body p,
 body.night-mode .menu-item-body p,
 body.night-mode .journey-step p,
 body.night-mode .visit-info,
 body.night-mode .stat-label,
 body.night-mode .review-card p,
 body.night-mode .review-card cite{color:rgba(231,210,184,.65);}
+
 
 body.night-mode .menu-tab{
   color:#E7D2B8;
