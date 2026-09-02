@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew &amp; Bloom — Every cup has a story.</title>
+<meta name="description" content="Brew & Bloom is a premium coffee house. Every cup has a story — carefully roasted beans, handcrafted drinks, and a space made for slowing down.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/redesign.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">☕ <span>Brew &amp; Bloom</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#top">Home</a>
+      <div class="nav-item-mega">
+        <a href="#menu">Menu</a>
+        <div class="mega-panel">
+          <a href="#menu" data-category="coffee" class="mega-link">☕ <span>Espresso &amp; Coffee</span></a>
+          <a href="#menu" data-category="coffee" class="mega-link">🥛 <span>Signature Coffee</span></a>
+          <a href="#menu" data-category="tea" class="mega-link">🌿 <span>Matcha &amp; Tea</span></a>
+          <a href="#menu" data-category="desserts" class="mega-link">🥐 <span>Bakery</span></a>
+          <a href="#menu" class="mega-explore">Explore Menu →</a>
+        </div>
+      </div>
+      <a href="#story">Our Story</a>
+      <a href="#experience">Experience</a>
+      <a href="#reserve">Reservations</a>
+      <a href="#visit">Find Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="cafe-mode-toggle" type="button" aria-pressed="false" title="Toggle Day / Night café">
+        <span class="mode-icon">☀️</span>
+      </button>
+      <button id="cart-toggle" type="button" aria-label="Open cart" aria-expanded="false" aria-controls="cart-panel">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <a href="#menu" class="btn btn-primary nav-cta">Order Now</a>
+      <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE MENU ===================== -->
+<div id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <span class="mobile-brand">BREW &amp; BLOOM</span>
+    <nav>
+      <a href="#top">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#experience">Experience</a>
+      <a href="#reserve">Reservations</a>
+      <a href="#visit">Find Us</a>
+    </nav>
+    <button id="cart-toggle-mobile" type="button" class="btn btn-outline mobile-cart-btn" aria-label="Open cart">
+      🛒 Cart (<span class="cart-count" id="cart-count-mobile">0</span>)
+    </button>
+    <a href="#menu" class="btn btn-primary">Order Now</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-bg" style="background-image:url('https://images.pexels.com/photos/35134952/pexels-photo-35134952.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-beans" aria-hidden="true">
+      <span class="bean b1"></span><span class="bean b2"></span><span class="bean b3"></span>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow" data-fade>Est. 2026 · Artisan Coffee House</span>
+      <h1 class="hero-heading hero-heading-stacked" data-reveal>
+        <span>BREW</span>
+        <span class="accent">&amp;</span>
+        <span>BLOOM</span>
+      </h1>
+      <p class="hero-sub" data-fade>Coffee made slowly. Moments enjoyed fully.</p>
+      <div class="hero-buttons" data-fade>
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+      </div>
+    </div>
+    <a href="#featured" class="scroll-cue" aria-label="Scroll to explore">
+      <span>Scroll to explore</span>
+      <span class="scroll-arrow" aria-hidden="true">↓</span>
+    </a>
+  </section>
+
+  <!-- ===================== FEATURED COFFEE ===================== -->
+  <section id="featured" class="section">
+    <div class="section-inner">
+      <span class="eyebrow" data-fade>Our Favorites</span>
+      <h2 class="section-heading" data-fade>Made for your moment.</h2>
+      <p class="section-sub" data-fade>Discover the drinks our baristas love making most.</p>
+
+      <div class="editorial-grid">
+        <article class="editorial-card" data-fade>
+          <span class="editorial-num">01</span>
+          <div class="editorial-img" style="background-image:url('https://images.pexels.com/photos/13623762/pexels-photo-13623762.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="editorial-body">
+            <div class="editorial-top">
+              <h3>Velvet Cappuccino</h3>
+              <span class="price">$5.50</span>
+            </div>
+            <p class="editorial-desc">Rich espresso with perfectly balanced steamed milk and a silky, hand-poured foam.</p>
+            <button class="btn-add editorial-add" data-name="Velvet Cappuccino" data-price="5.50" data-img="https://images.pexels.com/photos/13623762/pexels-photo-13623762.jpeg?auto=compress&cs=tinysrgb&w=200">Add to Cart <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="editorial-card" data-fade>
+          <span class="editorial-num">02</span>
+          <div class="editorial-img" style="background-image:url('https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="editorial-body">
+            <div class="editorial-top">
+              <h3>Caramel Cloud Latte</h3>
+              <span class="price">$6.00</span>
+            </div>
+            <p class="editorial-desc">Espresso, warm caramel, and creamy steamed milk — soft, sweet, and quietly powerful.</p>
+            <button class="btn-add editorial-add" data-name="Caramel Cloud Latte" data-price="6.00" data-img="https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=200">Add to Cart <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="editorial-card" data-fade>
+          <span class="editorial-num">03</span>
+          <div class="editorial-img" style="background-image:url('https://images.pexels.com/photos/691169/pexels-photo-691169.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="editorial-body">
+            <div class="editorial-top">
+              <h3>Midnight Mocha</h3>
+              <span class="price">$6.25</span>
+            </div>
+            <p class="editorial-desc">Dark chocolate and espresso, steamed together into something deep and comforting.</p>
+            <button class="btn-add editorial-add" data-name="Midnight Mocha" data-price="6.25" data-img="https://images.pexels.com/photos/691169/pexels-photo-691169.jpeg?auto=compress&cs=tinysrgb&w=200">Add to Cart <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="editorial-card" data-fade>
+          <span class="editorial-num">04</span>
+          <div class="editorial-img" style="background-image:url('https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="editorial-body">
+            <div class="editorial-top">
+              <h3>Bloom Cold Brew</h3>
+              <span class="price">$5.25</span>
+            </div>
+            <p class="editorial-desc">Slow-brewed for 18 hours, finished with smooth citrus notes. Quietly bold.</p>
+            <button class="btn-add editorial-add" data-name="Bloom Cold Brew" data-price="5.25" data-img="https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=200">Add to Cart <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR STORY ===================== -->
+  <section id="story" class="section alt">
+    <div class="section-inner story-grid">
+      <div class="story-img" data-parallax>
+        <img src="https://images.pexels.com/photos/22679455/pexels-photo-22679455.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Hands holding a heap of freshly roasted coffee beans over a roaster" loading="lazy">
+      </div>
+      <div class="story-content" data-fade-right>
+        <span class="eyebrow">From Bean to Moment</span>
+        <h2 class="section-heading">Every cup has a story.</h2>
+        <p>Brew &amp; Bloom began with a simple idea — coffee should be more than something you drink. It should be a moment you enjoy.</p>
+        <a href="#experience" class="text-link">Read Our Story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COFFEE PROCESS ===================== -->
+  <section id="journey" class="section process-section">
+    <div class="section-inner">
+      <span class="eyebrow" data-fade>The Process</span>
+      <h2 class="section-heading" data-fade>From bean to beautiful.</h2>
+
+      <div class="process-layout">
+        <div class="journey-steps" id="process-steps">
+          <div class="journey-line" aria-hidden="true"><span class="journey-line-fill"></span></div>
+          <button type="button" class="journey-step process-step is-active" data-fade data-step="source" data-img="https://images.pexels.com/photos/22679455/pexels-photo-22679455.jpeg?auto=compress&cs=tinysrgb&w=900" data-tagline="Carefully sourced, ethically traded beans.">
+            <span class="step-num">01</span>
+            <h3>Source</h3>
+            <p>A bold beginning.</p>
+          </button>
+          <button type="button" class="journey-step process-step" data-fade data-step="roast" data-img="https://images.pexels.com/photos/9050518/pexels-photo-9050518.jpeg?auto=compress&cs=tinysrgb&w=900" data-tagline="Roasted slowly to bring out their natural character.">
+            <span class="step-num">02</span>
+            <h3>Roast</h3>
+            <p>Depth, drawn out slowly.</p>
+          </button>
+          <button type="button" class="journey-step process-step" data-fade data-step="brew" data-img="https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=900" data-tagline="Brewed and poured by hand, one cup at a time.">
+            <span class="step-num">03</span>
+            <h3>Brew</h3>
+            <p>Crafted by our baristas.</p>
+          </button>
+          <button type="button" class="journey-step process-step" data-fade data-step="enjoy" data-img="https://images.pexels.com/photos/13623762/pexels-photo-13623762.jpeg?auto=compress&cs=tinysrgb&w=900" data-tagline="A moment, finally, worth slowing down for.">
+            <span class="step-num">04</span>
+            <h3>Enjoy</h3>
+            <p>The pause you were waiting for.</p>
+          </button>
+        </div>
+
+        <div class="process-stage" data-fade-right>
+          <div class="process-stage-img" id="process-stage-img" style="background-image:url('https://images.pexels.com/photos/22679455/pexels-photo-22679455.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+          <p class="process-stage-tagline" id="process-stage-tagline">Carefully sourced, ethically traded beans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERACTIVE MENU ===================== -->
+  <section id="menu" class="section alt">
+    <div class="section-inner">
+      <span class="eyebrow" data-fade>The Menu</span>
+      <h2 class="section-heading" data-fade>Something for every craving.</h2>
+
+      <!-- Horizontal interactive category browser. Reuses .menu-tab + data-category
+           so the existing filter logic in menu.js keeps working untouched;
+           interactions.js layers the hover/click "stage" preview on top. -->
+      <div class="category-browser" data-fade>
+        <div class="category-pills" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab category-pill active" data-category="all" role="tab" aria-selected="true">All</button>
+          <button class="menu-tab category-pill" data-category="coffee" role="tab" aria-selected="false" data-stage-img="https://images.pexels.com/photos/9050518/pexels-photo-9050518.jpeg?auto=compress&cs=tinysrgb&w=900" data-stage-tagline="A bold beginning.">Espresso</button>
+          <button class="menu-tab category-pill" data-category="cold" role="tab" aria-selected="false" data-stage-img="https://images.pexels.com/photos/13623762/pexels-photo-13623762.jpeg?auto=compress&cs=tinysrgb&w=900" data-stage-tagline="Cool, smooth, unhurried.">Milk</button>
+          <button class="menu-tab category-pill" data-category="tea" role="tab" aria-selected="false" data-stage-img="https://images.pexels.com/photos/8634757/pexels-photo-8634757.jpeg?auto=compress&cs=tinysrgb&w=900" data-stage-tagline="Calm energy, beautifully crafted.">Matcha</button>
+          <button class="menu-tab category-pill" data-category="desserts" role="tab" aria-selected="false" data-stage-img="https://images.pexels.com/photos/19296861/pexels-photo-19296861.jpeg?auto=compress&cs=tinysrgb&w=900" data-stage-tagline="Baked fresh, every morning.">Bakery</button>
+        </div>
+        <div class="category-stage" id="category-stage" hidden>
+          <div class="category-stage-img" id="category-stage-img"></div>
+          <div class="category-stage-text">
+            <span class="category-stage-label" id="category-stage-label"></span>
+            <p id="category-stage-tagline"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SIGNATURE EXPERIENCE ===================== -->
+  <section id="experience" class="signature">
+    <div class="signature-bg" style="background-image:url('https://images.pexels.com/photos/930402/pexels-photo-930402.jpeg?auto=compress&cs=tinysrgb&w=1920')" data-parallax-bg></div>
+    <div class="signature-overlay"></div>
+    <div class="signature-content" data-fade>
+      <h2>Slow mornings.<br>Long conversations.<br>Coffee worth remembering.</h2>
+      <a href="#visit" class="text-link light">Experience Brew &amp; Bloom →</a>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="section stats-section">
+    <div class="section-inner stats-grid">
+      <div class="stat" data-fade>
+        <span class="stat-num" data-count="12" data-suffix="+">0</span>
+        <span class="stat-label">Coffee varieties</span>
+      </div>
+      <div class="stat" data-fade>
+        <span class="stat-num" data-count="8">0</span>
+        <span class="stat-label">Years of passion</span>
+      </div>
+      <div class="stat" data-fade>
+        <span class="stat-num" data-count="25" data-suffix="K+">0</span>
+        <span class="stat-label">Happy customers</span>
+      </div>
+      <div class="stat" data-fade>
+        <span class="stat-num" data-count="4.9" data-decimal="true">0</span>
+        <span class="stat-label">Average rating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews" class="section alt">
+    <div class="section-inner">
+      <span class="eyebrow" data-fade>Testimonials</span>
+      <h2 class="section-heading" data-fade>Loved by coffee people.</h2>
+
+      <div class="reviews-grid">
+        <blockquote class="review-card" data-fade>
+          <p>"The kind of coffee shop where one cup somehow turns into three hours."</p>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <cite>— Sarah</cite>
+        </blockquote>
+        <blockquote class="review-card" data-fade>
+          <p>"Beautiful atmosphere, incredible coffee, and the best caramel latte I've had."</p>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <cite>— Emma</cite>
+        </blockquote>
+        <blockquote class="review-card" data-fade>
+          <p>"My mornings feel different now. Slower, warmer, better."</p>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <cite>— Daniyal</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESERVATION ===================== -->
+  <section id="reserve" class="section alt reserve-section">
+    <div class="section-inner reserve-grid">
+      <div class="reserve-img" data-fade>
+        <img src="https://images.pexels.com/photos/34164459/pexels-photo-34164459.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="A sunlit, cozy corner table waiting to be reserved" loading="lazy">
+      </div>
+      <div class="reserve-form-wrap" data-fade-right>
+        <span class="eyebrow">Reservations</span>
+        <h2 class="section-heading">Reserve your table.</h2>
+        <p class="section-sub">Save a seat for slow mornings or long conversations — we'll have it ready.</p>
+
+        <form id="reserve-form" novalidate>
+          <div class="form-row">
+            <label for="reserve-name" class="sr-only">Full name</label>
+            <input type="text" id="reserve-name" name="name" placeholder="Full name" required>
+            <label for="reserve-email" class="sr-only">Email</label>
+            <input type="email" id="reserve-email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-row">
+            <label for="reserve-phone" class="sr-only">Phone</label>
+            <input type="tel" id="reserve-phone" name="phone" placeholder="Phone number" required>
+            <label for="reserve-guests" class="sr-only">Guests</label>
+            <input type="number" id="reserve-guests" name="guests" placeholder="Guests" min="1" max="12" required>
+          </div>
+          <div class="form-row">
+            <label for="reserve-date" class="sr-only">Date</label>
+            <input type="date" id="reserve-date" name="date" required>
+            <label for="reserve-time" class="sr-only">Time</label>
+            <input type="time" id="reserve-time" name="time" required>
+          </div>
+          <button type="submit" class="btn btn-primary reserve-submit">Reserve Table</button>
+          <p class="reserve-msg" id="reserve-msg" role="status" aria-live="polite"></p>
+          <p class="cart-footnote">Reservations aren't saved to a database yet — that arrives with the backend in a later build phase.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISIT US ===================== -->
+  <section id="visit" class="section">
+    <div class="section-inner visit-grid">
+      <div data-fade>
+        <span class="eyebrow">Find Us</span>
+        <h2 class="section-heading">Come stay awhile.</h2>
+        <ul class="visit-info">
+          <li>📍 24 Bloom Street</li>
+          <li>☕ Open daily</li>
+          <li>🕐 8:00 AM – 10:00 PM</li>
+        </ul>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Get Directions</a>
+          <a href="#" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+      <div class="visit-map" data-fade>
+        <iframe
+          title="Brew & Bloom location map"
+          src="https://www.google.com/maps?q=24+Bloom+Street&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="newsletter">
+    <div class="section-inner newsletter-inner" data-fade>
+      <h2>Stay in the loop.</h2>
+      <p>New blends, seasonal drinks, and little moments of inspiration — delivered occasionally.</p>
+      <form id="newsletter-form" novalidate>
+        <label for="newsletter-email" class="sr-only">Your email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary">Join the Bloom</button>
+      </form>
+      <p class="newsletter-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">BREW &amp; BLOOM</span>
+      <p>Every cup has a story.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#top">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#experience">Experience</a>
+      <a href="#reserve">Reservations</a>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <a href="#visit">Location</a>
+      <a href="#visit">Opening Hours</a>
+      <a href="#visit">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Brew &amp; Bloom. Crafted with ☕ &amp; love.</div>
+</footer>
+
+<!-- ===================== CART DRAWER ===================== -->
+<div id="cart-overlay"></div>
+<aside id="cart-panel" aria-hidden="true" aria-label="Your order">
+  <div class="cart-panel-header">
+    <h2>Your Order</h2>
+    <button id="cart-close" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <!-- populated by cart.js -->
+  </div>
+  <div class="cart-panel-footer">
+    <div class="cart-subtotal-row">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">$0.00</span>
+    </div>
+    <button id="cart-checkout" class="btn btn-primary cart-checkout-btn" type="button">Proceed to Checkout</button>
+    <p class="cart-footnote">Guest checkout, accounts &amp; order tracking are coming in the next build phase.</p>
+  </div>
+</aside>
+
+<div id="order-toast" role="status" aria-live="polite"></div>
+
+<script src="js/menu.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
